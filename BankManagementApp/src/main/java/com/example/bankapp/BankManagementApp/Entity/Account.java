@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Account {
+    public Account() {
+    }
 
     public Account(String accountHolderName, Double accountBalance) {
         this.accountHolderName = accountHolderName;
