@@ -9,8 +9,8 @@ public interface AccountService {
     public Account getAccountDetailsByAccountNumber(Long accountNumber);
     public List<Account> getAllAccountDetails();
 
-    public Account depositAmount(Long accontNumber, Account account);
-    public Account withdrawAmount(Long accontNumber, Account account);
+    public Account depositAmount(Long accountNumber, Double amount);
+    public Account withdrawAmount(Long accountNumber, Double amount);
     public void closeAccount(Long accountNumber);
 
 }
