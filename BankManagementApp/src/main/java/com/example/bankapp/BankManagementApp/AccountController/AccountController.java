@@ -42,4 +42,10 @@ public class AccountController {
         return depositAmount;
     }
 
+    @PutMapping("/withdraw/{accountNumber}/{amount}")
+    private Account withdrawAmount(@PathVariable Long accountNumber,@PathVariable Double amount){
+        Account withdrawAmount = service.withdrawAmount(accountNumber,amount);
+        return withdrawAmount;
+    }
+
 }
