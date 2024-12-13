@@ -48,4 +48,10 @@ public class AccountController {
         return withdrawAmount;
     }
 
+    @DeleteMapping("/delete/{accountNumber}")
+    private ResponseEntity<String> closeAccount(@PathVariable Long accountNumber){
+        service.closeAccount(accountNumber);
+        return ResponseEntity.ok("Account closed");
+    }
+
 }
